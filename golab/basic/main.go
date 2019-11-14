@@ -27,7 +27,25 @@ func valuesOfRangeSyntax(){
 	}
 }
 
+// value が ゼロ値のときに加算できるんだっけという話が出たので
+func maptest() {
+	m1 := make(map[string]int)
+	m2 := make(map[string]int)
+
+	s := []string{ "yo", "hi", "yo", "hi"}
+	for _, v := range s {
+		switch v {
+		case "yo":
+			m1["yoresult"] += 1
+		case "hi":
+			m2["hiresult"] += 1
+		}
+	}
+	fmt.Printf("m1: %+v, m2: %+v", m1, m2)
+}
+
 func main(){
 	//manipulateByPointer()
-	valuesOfRangeSyntax()
+	//valuesOfRangeSyntax()
+	maptest()
 }

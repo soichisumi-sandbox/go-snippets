@@ -47,6 +47,12 @@ func TestGods(){
 		fmt.Printf("value: %v", v)
 	}
 }
+
+func GodStringCmp() {
+	fmt.Printf("res: %+v\n", utils.StringComparator("22fa1ba1-f395-4c7f-8b6c-3550f55734dd","a8d6d0b1-249c-4c0f-b82b-becbb9ca0872"))
+}
+
 func main(){
-	TestGods()
+	//TestGods()
+	GodStringCmp()
 }

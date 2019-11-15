@@ -35,7 +35,6 @@ func TestGods(){
 		return utils.IntComparator(dogA.Age, dogB.Age)
 	}
 
-	// Dogにgetkeyが実装されているべき
 	tm := treeset.NewWith(dogComparator)
 
 	for _, v := range testdata {

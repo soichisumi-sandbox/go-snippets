@@ -1,4 +1,4 @@
-package storage
+package main
 
 import (
 	"cloud.google.com/go/storage"
@@ -20,7 +20,8 @@ func main() {
 	}
 
 	it := client.Bucket(bucketName).Objects(ctx, &storage.Query{
-		Delimiter: "/", // if set, object name after delimiter from prefix is discarded(name of all object is path from root)
+		Delimiter: "/", // Delimiter returns results in a directory-like fashion.
+						// Results will contain only objects whose names, aside from the prefix, do not contain delimiter.
 		Prefix:    "2020-01-14/", // prefix of object path. ex: 2020-01-14/
 		Versions:  false,
 	})
